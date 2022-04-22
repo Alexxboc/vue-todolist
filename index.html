@@ -26,7 +26,7 @@
                 <button @click="addTask" :disabled="!newTask">Add</button> 
             </div>
             <!-- /.add_task -->
-            <div class="task_area">
+            <div class="task_area" v-if="tasks.length > 0">
                 <ul>
                     <li v-for="(task,index) in tasks">
                         <span v-if="task.done === true" class="text_decoration_line_through" @click="changeValue(index)">
@@ -41,6 +41,7 @@
                 </ul>
             </div>
             <!-- /.task_area -->
+            <p class="nothing_todo" v-else>Oggi niente tasks 🙌 <br>Ti puoi riposare!</p>
         </div>
         <!-- /.container -->
     </div>
