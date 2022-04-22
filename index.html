@@ -20,16 +20,16 @@
             <!-- /.logo -->
             <div class="add_task">
                 <input type="text" v-model="newTask.text" @keyup.enter="addTask">
-                <button @click="addTask">Add</button>
+                <button @click="addTask" :disabled="!newTask.text">Add</button>
             </div>
             <!-- /.add_task -->
             <div class="task_area">
                 <ul>
                     <li v-for="(task,index) in tasks">
-                        <span v-if="task.done === true" class="text_decoration_line_through">
+                        <span v-if="task.done === true" class="text_decoration_line_through" @click="changeValue(index)">
                             {{task.text}}
                         </span>
-                        <span v-else>
+                        <span v-else @click="changeValue(index)">
                             {{task.text}}
                         </span>
                         <!-- /.task -->

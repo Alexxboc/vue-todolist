@@ -50,15 +50,31 @@ const app = new Vue ({
     methods: {
         removeTodo(index) {
             // console.log('remove', this);
-            this.tasks.splice(index, 1)
+            this.tasks.splice(index, 1);
         },
 
         addTask() {
             // console.log('add task');
-            this.tasks.unshift(this.newTask)
-            this.newTask = ''
-        }
-    }
+            if(this.newTask.text.length > 0) {
+                this.tasks.unshift(this.newTask);
+                this.newTask = '';
+            }
+            
+            
+        },
+
+        changeValue(index) {
+            console.log('change value', this);
+            if(this.tasks[index].done !== true) {
+                this.tasks[index].done = true;
+            } else {
+                this.tasks[index].done = false;
+            }
+        },
+
+    },
+
+    
 
 })
             
