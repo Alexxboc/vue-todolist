@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
 
 
 .container {
@@ -24,7 +28,7 @@
 
 .task_area {
     margin-top: 3rem;
-    background-color: lightgray;
+    background-color: #d3d3d36e;
     padding: 3rem;
     border-radius: 20px;
     width: 100%;
