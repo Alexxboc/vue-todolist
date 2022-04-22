@@ -51,9 +51,15 @@ const app = new Vue ({
         removeTodo(index) {
             // console.log('remove', this);
             this.tasks.splice(index, 1)
-            
-            
+        },
+
+        addTask() {
+            // console.log('add task');
+            this.tasks.unshift(this.newTask)
+            this.newTask = ''
         }
     }
 
 })
+            
+            

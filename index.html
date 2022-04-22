@@ -19,8 +19,8 @@
             </div>
             <!-- /.logo -->
             <div class="add_task">
-                <input type="text">
-                <button>Add</button>
+                <input type="text" v-model="newTask.text">
+                <button @click="addTask">Add</button>
             </div>
             <!-- /.add_task -->
             <div class="task_area">
