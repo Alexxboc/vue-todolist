@@ -19,7 +19,7 @@
             </div>
             <!-- /.logo -->
             <div class="add_task">
-                <input type="text" v-model="newTask.text">
+                <input type="text" v-model="newTask.text" @keyup.enter="addTask">
                 <button @click="addTask">Add</button>
             </div>
             <!-- /.add_task -->
