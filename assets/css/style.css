@@ -57,3 +57,7 @@
     text-decoration: line-through;
 }
 
+.task_area i {
+    cursor: pointer;
+}
+

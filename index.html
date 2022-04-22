@@ -25,7 +25,7 @@
             <!-- /.add_task -->
             <div class="task_area">
                 <ul>
-                    <li v-for="task in tasks">
+                    <li v-for="(task,index) in tasks">
                         <span v-if="task.done === true" class="text_decoration_line_through">
                             {{task.text}}
                         </span>
@@ -33,7 +33,7 @@
                             {{task.text}}
                         </span>
                         <!-- /.task -->
-                        <i class="fa-solid fa-times" aria-hidden="true"></i>
+                        <i class="fa-solid fa-times" aria-hidden="true" @click="removeTodo"></i>
                     </li>
                 </ul>
             </div>

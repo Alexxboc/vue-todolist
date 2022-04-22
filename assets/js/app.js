@@ -45,6 +45,15 @@ const app = new Vue ({
         }
         
 
+    },
+
+    methods: {
+        removeTodo(index) {
+            // console.log('remove', this);
+            this.tasks.splice(index, 1)
+            
+            
+        }
     }
 
 })
