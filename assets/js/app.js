@@ -39,10 +39,9 @@ const app = new Vue ({
             },
         ],
 
-        newTask: {
-            text: '',
-            done: false
-        }
+        newTask: ''
+            
+        
         
 
     },
@@ -55,8 +54,8 @@ const app = new Vue ({
 
         addTask() {
             // console.log('add task');
-            if(this.newTask.text.length > 0) {
-                this.tasks.unshift(this.newTask);
+            if(this.newTask) {
+                this.tasks.unshift({text: this.newTask, done: false});
                 this.newTask = '';
             }
             
@@ -64,12 +63,8 @@ const app = new Vue ({
         },
 
         changeValue(index) {
-            console.log('change value', this);
-            if(this.tasks[index].done !== true) {
-                this.tasks[index].done = true;
-            } else {
-                this.tasks[index].done = false;
-            }
+            // console.log('change value', this);
+            this.tasks[index].done !== true? this.tasks[index].done = true : this.tasks[index].done = false
         },
 
     },

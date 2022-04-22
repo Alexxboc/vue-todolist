@@ -19,8 +19,8 @@
             </div>
             <!-- /.logo -->
             <div class="add_task">
-                <input type="text" v-model="newTask.text" @keyup.enter="addTask">
-                <button @click="addTask" :disabled="!newTask.text">Add</button>
+                <input type="text" v-model="newTask" @keyup.enter="addTask">
+                <button @click="addTask" :disabled="!newTask">Add</button> 
             </div>
             <!-- /.add_task -->
             <div class="task_area">
