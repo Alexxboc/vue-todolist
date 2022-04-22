@@ -52,4 +52,8 @@
     border-radius: 15px;
     border: 1px solid lightgrey;
 }
+
+.text_decoration_line_through {
+    text-decoration: line-through;
 }
+

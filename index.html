@@ -25,38 +25,16 @@
             <!-- /.add_task -->
             <div class="task_area">
                 <ul>
-                    <li>
-                        <div class="task">
-                            Fare i compiti
-                        </div>
+                    <li v-for="task in tasks">
+                        <span v-if="task.done === true" class="text_decoration_line_through">
+                            {{task.text}}
+                        </span>
+                        <span v-else>
+                            {{task.text}}
+                        </span>
                         <!-- /.task -->
                         <i class="fa-solid fa-times" aria-hidden="true"></i>
                     </li>
-
-                    <li>
-                        <div class="task">
-                            Fare i compiti
-                        </div>
-                        <!-- /.task -->
-                        <i class="fa-solid fa-times" aria-hidden="true"></i>
-                    </li>
-
-                    <li>
-                        <div class="task">
-                            Fare i compiti
-                        </div>
-                        <!-- /.task -->
-                        <i class="fa-solid fa-times" aria-hidden="true"></i>
-                    </li>
-
-                    <li>
-                        <div class="task">
-                            Fare i compiti
-                        </div>
-                        <!-- /.task -->
-                        <i class="fa-solid fa-times" aria-hidden="true"></i>
-                    </li>
-                  
                 </ul>
             </div>
             <!-- /.task_area -->
