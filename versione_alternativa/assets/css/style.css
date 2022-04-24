@@ -1,0 +1,123 @@
+/* Common rules */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Utilities */
+
+.container {
+    height: 100vh;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    max-width: 1200px;
+}
+
+/* Logo */
+
+.logo {
+    font-size: 50px;
+    font-weight: bold;
+    margin-bottom: 2rem;
+}
+
+/* Input & Button */
+
+.add_task input {
+    width: 400px;
+    padding: 0.75rem;
+    border-radius: 10p;
+    border-radius: 15px;
+    border: 1px solid lightgrey;
+    }
+
+.add_task button {
+    padding: 0.75rem 2rem;
+    border-radius: 15px;
+    border: 1px solid lightgrey;
+}
+
+/* Tasks area */
+
+.tasks_container {
+    display: flex;
+    column-gap: 1rem;
+    width: 100%;
+    justify-content: center;
+}
+
+.tasks_container h2 {
+    margin-bottom: 1.5rem;
+}
+
+.task_area {
+    margin-top: 3rem;
+    background-color: #d3d3d36e;
+    padding: 3rem;
+    border-radius: 20px;
+    width: 50%;
+}
+
+.task_complete_area {
+    margin-top: 3rem;
+    background-color: #d3d3d36e;
+    padding: 3rem;
+    border-radius: 20px;
+    width: 30%;
+}
+
+.task_area li, .task_complete_area li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 0.5px solid #1b1a1a33;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+    font-size: 20px;
+}
+
+.completed_text {
+    color: rgba(0, 0, 0, 0.272);
+
+}
+
+.task_area i, .task_complete_area i {
+    cursor: pointer;
+}
+
+.task_area .icons i {
+    margin-left: 0.5rem;
+}
+
+.icons .green {
+    color: green;
+}
+
+.nothing_todo {
+    margin-top: 3rem;
+    background-color: #d3d3d36e;
+    padding: 3rem;
+    border-radius: 20px;
+    width: 50%;
+    text-align: center;
+    font-size: 20px;
+}
+
+
+
+
+
+
+
+
+
+

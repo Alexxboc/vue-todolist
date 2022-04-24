@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&display=swap" rel="stylesheet">
+    <!-- Font Awsome cnd link -->
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css' integrity='sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==' crossorigin='anonymous' referrerpolicy='no-referrer' />
+    <!-- Style.css link -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>Vue Todolis</title>
+</head>
+<body>
+    
+    <div id="app">
+        <div class="container">
+            <div class="logo">
+                <img width="450" src="https://hiringplatform.boolean.careers/images/logo.png" alt="">
+            </div>
+            <!-- /.logo -->
+            <div class="add_task">
+                <input type="text" v-model="newTask" @keyup.enter="addTask" placeholder="Nuovo Todo">
+                <button @click="addTask" :disabled="!newTask">Add</button> 
+            </div>
+            <!-- /.add_task -->
+
+            <div class="tasks_container">
+                <div class="task_area" v-if="tasks.length > 0">
+                    <h2>Todo List</h2>
+                    <ul>
+                       
+                            <li v-for="(task,index) in tasks">
+                                <span>
+                                    {{task.text}}
+                                </span>
+                    
+                                <!-- /.task -->
+                                <div class="icons">
+                                    <i class="fa-solid fa-circle-check green" @click="addToCompleted(index)"></i>
+                                    <i class="fa-solid fa-times" aria-hidden="true" @click="removeTodo"></i>
+                                </div>
+                                
+                            </li>
+                       
+                    </ul>
+                </div>
+                <!-- /.task_area -->
+                <p class="nothing_todo" v-else>Oggi niente tasks 🙌 <br>Ti puoi riposare!</p>
+    
+                <div v-if="completedTasks.length > 0"  class="task_complete_area">
+                    <h2>Completed</h2>
+                    <ul>
+                        <li v-for="(task,index) in completedTasks">
+                            <span class="completed_text">
+                                {{task.text}}
+                            </span>
+                            <!-- /.task -->
+                            <i class="fa-solid fa-arrow-rotate-left" @click="removeFromCompleted(index)"></i>
+                        </li>
+                    
+                    </ul>
+                </div>
+                <!-- /.task_complete_area -->
+            </div>
+            <!-- /.tasks_container -->
+           
+        </div>
+        <!-- /.container -->
+    </div>
+    <!-- /#app -->
+
+    <!-- VueJs link cdn -->
+    <script src='https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js'></script>
+    <!-- App.js link -->
+    <script src="./assets/js/app.js"></script>
+</body>
+</html>
+                
