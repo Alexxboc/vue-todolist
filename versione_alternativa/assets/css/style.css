@@ -55,27 +55,34 @@ body {
     justify-content: center;
 }
 
-.tasks_container h2 {
-    margin-bottom: 1.5rem;
+.task_area h2, .task_complete_area h2, .task_delete_area h2 {
+    margin-bottom: 2rem;
+    font-size: 30px;
+}
+
+.task_area, .task_complete_area, .task_delete_area {
+    margin-top: 3rem;
+    background-color: #d3d3d36e;
+    padding: 3rem;
+    border-radius: 20px;
+    text-align: center;
+    
 }
 
 .task_area {
-    margin-top: 3rem;
-    background-color: #d3d3d36e;
-    padding: 3rem;
-    border-radius: 20px;
-    width: 50%;
+    width: 45%;
 }
 
 .task_complete_area {
-    margin-top: 3rem;
-    background-color: #d3d3d36e;
-    padding: 3rem;
-    border-radius: 20px;
     width: 30%;
 }
 
-.task_area li, .task_complete_area li {
+.task_delete_area {
+    width: 25%;
+    text-align: center;
+}
+
+.task_area li, .task_complete_area li, .task_delete_area li {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -90,7 +97,7 @@ body {
 
 }
 
-.task_area i, .task_complete_area i {
+.task_area i, .task_complete_area i, .task_delete_area i {
     cursor: pointer;
 }
 
@@ -100,6 +107,20 @@ body {
 
 .icons .green {
     color: green;
+}
+
+.trash_title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.trash_title i {
+    margin-left: 0.75rem;
+    margin-bottom: 2rem;
+    font-size: 18px;
+    color: red;
+
 }
 
 .nothing_todo {

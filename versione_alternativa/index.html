@@ -31,20 +31,16 @@
                 <div class="task_area" v-if="tasks.length > 0">
                     <h2>Todo List</h2>
                     <ul>
-                       
-                            <li v-for="(task,index) in tasks">
-                                <span>
-                                    {{task.text}}
-                                </span>
-                    
-                                <!-- /.task -->
-                                <div class="icons">
-                                    <i class="fa-solid fa-circle-check green" @click="addToCompleted(index)"></i>
-                                    <i class="fa-solid fa-times" aria-hidden="true" @click="removeTodo"></i>
-                                </div>
-                                
-                            </li>
-                       
+                        <li v-for="(task,index) in tasks">
+                            <span>
+                                {{task.text}}
+                            </span>
+                            <!-- /.task -->
+                            <div class="icons">
+                                <i class="fa-solid fa-circle-check green" @click="addToCompleted(index)"></i>
+                                <i class="fa-solid fa-times" aria-hidden="true" @click="removeTodo(index)"></i>
+                            </div>
+                        </li>
                     </ul>
                 </div>
                 <!-- /.task_area -->
@@ -60,10 +56,27 @@
                             <!-- /.task -->
                             <i class="fa-solid fa-arrow-rotate-left" @click="removeFromCompleted(index)"></i>
                         </li>
-                    
                     </ul>
                 </div>
                 <!-- /.task_complete_area -->
+
+                <div v-if="deletedTasks.length > 0" class="task_delete_area">
+                    <div class="trash_title">
+                        <h2>Trashed</h2>
+                        <i class="fa-solid fa-trash-can" @click="clearTrash"></i>
+                    </div>
+                    <!-- /.trash_title -->
+                    <ul>
+                        <li v-for="(task,index) in deletedTasks">
+                            <span class="completed_text">
+                                {{task.text}}
+                            </span>
+                            <!-- /.task -->
+                            <i class="fa-solid fa-trash-arrow-up" @click="restoreDeletedTasks(index)"></i>
+                        </li>
+                    </ul>
+                </div>
+                <!-- /.task_delete_area -->
             </div>
             <!-- /.tasks_container -->
            
@@ -79,3 +92,5 @@
 </body>
 </html>
                 
+                    
+                    

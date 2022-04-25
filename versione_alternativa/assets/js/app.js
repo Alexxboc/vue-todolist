@@ -36,13 +36,16 @@ const app = new Vue ({
         newTask: '',
             
         completedTasks: [],
+
+        deletedTasks: [],
         
 
     },
 
     methods: {
         removeTodo(index) {
-            // console.log('remove', this);
+            // console.log('remove', this.tasks.text);
+            this.deletedTasks.unshift({text: this.tasks[index].text, done: this.tasks[index].done})
             this.tasks.splice(index, 1);
         },
 
@@ -75,9 +78,17 @@ const app = new Vue ({
                 this.tasks.unshift({text: this.completedTasks[index].text, done: this.completedTasks[index].done})
                 this.completedTasks.splice(index, 1)
             }
+        },
+
+        restoreDeletedTasks(index) {
+            this.tasks.unshift({text: this.deletedTasks[index].text, done: this.deletedTasks[index].done})
+            this.deletedTasks.splice(index, 1);
+        },
+
+        clearTrash() {
+            alert('stai per svuotare il cestino, i file al suo interno non saranno più disponibili')
+            this.deletedTasks.splice(0, this.deletedTasks.length)
         }
-
-
         
 
     },
