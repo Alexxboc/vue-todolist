@@ -54,7 +54,11 @@
                                 {{task.text}}
                             </span>
                             <!-- /.task -->
-                            <i class="fa-solid fa-arrow-rotate-left" @click="removeFromCompleted(index)"></i>
+                            <div class="icons">
+                                <i class="fa-solid fa-arrow-rotate-left" @click="removeFromCompleted(index)"></i>
+                                <i class="fa-solid fa-times" aria-hidden="true" @click="deleteCompleted(index)"></i>
+                            </div>
+                            <!-- /.icons -->
                         </li>
                     </ul>
                 </div>
@@ -91,6 +95,7 @@
     <script src="./assets/js/app.js"></script>
 </body>
 </html>
+                            
                 
                     
                     

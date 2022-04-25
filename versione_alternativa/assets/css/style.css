@@ -63,14 +63,14 @@ body {
 .task_area, .task_complete_area, .task_delete_area {
     margin-top: 3rem;
     background-color: #d3d3d36e;
-    padding: 3rem;
+    padding: 2.5rem;
     border-radius: 20px;
     text-align: center;
     
 }
 
 .task_area {
-    width: 45%;
+    width: 40%;
 }
 
 .task_complete_area {
@@ -78,7 +78,7 @@ body {
 }
 
 .task_delete_area {
-    width: 25%;
+    width: 30%;
     text-align: center;
 }
 
@@ -101,7 +101,7 @@ body {
     cursor: pointer;
 }
 
-.task_area .icons i {
+.task_area .icons i, .task_complete_area i {
     margin-left: 0.5rem;
 }
 

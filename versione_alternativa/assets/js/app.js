@@ -49,6 +49,11 @@ const app = new Vue ({
             this.tasks.splice(index, 1);
         },
 
+        deleteCompleted(index) {
+            this.deletedTasks.unshift({text: this.completedTasks[index].text, done: this.completedTasks[index].done})
+            this.completedTasks.splice(index, 1);
+        },
+
         addTask() {
             // console.log('add task');
             if(this.newTask) {
