@@ -14,22 +14,26 @@ const app = new Vue ({
         tasks:[
             {
                 text: 'Fare la spesa',
-                done: false
+                done: false,
+                inputTransform: false
             },
 
             {
                 text: 'Andare al cinema',
-                done: false
+                done: false,
+                inputTransform: false
             },
 
             {
                 text: 'Fare i compiti',
-                done: false
+                done: false,
+                inputTransform: false
             },
 
             {
                 text: 'Guardare la partita',
-                done: false
+                done: false,
+                inputTransform: false
             },
         ],
 
@@ -93,13 +97,23 @@ const app = new Vue ({
         clearTrash() {
             alert('stai per svuotare il cestino, i file al suo interno non saranno più disponibili')
             this.deletedTasks.splice(0, this.deletedTasks.length)
+        },
+
+        inputTransformChangeValue(index) {
+            if(this.tasks[index].inputTransform !== true) {
+                this.tasks[index].inputTransform = true
+            } else {
+                this.tasks[index].inputTransform = false
+            } 
+            // console.log(this.tasks[index].inputTransform);
         }
-        
 
     },
-
     
-
 })
+
+        
+        
+        
             
             
