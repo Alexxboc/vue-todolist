@@ -55,6 +55,12 @@ body {
     justify-content: center;
 }
 
+.task_area input {
+    outline: none;
+    border: none;
+    background-color: transparent;
+}
+
 .task_area h2, .task_complete_area h2, .task_delete_area h2 {
     margin-bottom: 2rem;
     font-size: 30px;
@@ -82,6 +88,13 @@ body {
     text-align: center;
 }
 
+.task_area li, .task_complete_area li, .task_delete_area li, .task_area input {
+    font-size: 20px;
+    font-family: 'Poppins', sans-serif; 
+}
+    
+
+
 .task_area li, .task_complete_area li, .task_delete_area li {
     display: flex;
     justify-content: space-between;
@@ -89,7 +102,6 @@ body {
     border-bottom: 0.5px solid #1b1a1a33;
     padding-bottom: 0.5rem;
     margin-bottom: 1rem;
-    font-size: 20px;
 }
 
 .completed_text {

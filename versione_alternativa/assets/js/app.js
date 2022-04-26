@@ -95,8 +95,10 @@ const app = new Vue ({
         },
 
         clearTrash() {
-            alert('stai per svuotare il cestino, i file al suo interno non saranno più disponibili')
-            this.deletedTasks.splice(0, this.deletedTasks.length)
+            const confirmEmptyTrash = confirm('stai per svuotare il cestino, i file al suo interno non saranno più disponibili')
+            if(confirmEmptyTrash) {
+                this.deletedTasks.splice(0, this.deletedTasks.length)
+            }
         },
 
         inputTransformChangeValue(index) {
